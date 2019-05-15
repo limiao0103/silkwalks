@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>带路者官网</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+    <!--头部-->
+    <div id="header"></div>
+    <script>
+        $("#header").load("comment/header.html");
+    </script>
+
+    <!--banner 开始-->
+    <div class="banner" style="height: 500px" >
+        <a href="#" class="d1" style="background:url(picture/about_me_banner.gif) 0 0 / 100% 100% no-repeat;height: 500px"></a>
+    </div>
+    <!--banner 结束-->
+
+    <!--关于我们 开始-->
+    <div class="about_me w"  >
+        <div class="title">
+            <p><span>About us</span><span>关于我们</span></p>
+            <i></i>
+        </div>
+        <div class="box">
+            <div class="video1" id="video1">
+                <div class="video1_box" id="video1Box">
+                    <div id="video1BoxMask"></div>
+                    <i id="videoBtn"><img src="images/about_me/zt.png" alt="" id="videoImg"></i>
+                    <!--<b id="loading"></b>-->
+                </div>
+                <i id="mask"></i>
+                <div class="m-load2" id="mLoad2">
+                    <div class="line">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="circlebg"></div>
+                </div>
+                <video style="width: 100%;height: 530px"   id="player1" poster="images/about_me/about-me-video.jpg" preload="none"  loop="loop">
+                    <source src="http://www.silkwalks.com/video/silkwalks.mp4" type="video/mp4">
+                    <!--<source src="sample.ogg" type="video/ogg">-->
+                    你的浏览器不支持HTML5 video.
+                </video>
+            </div>
+            <!--<ul class="clearfix">
+                   <li><img src="picture/about_me_content1.gif" alt=""></li>
+                   <li><img src="picture/about_me_content2.gif" alt=""></li>
+                   <li><img src="picture/about_me_content3.gif" alt=""></li>
+                   <li><img src="picture/about_me_content4.gif" alt=""></li>
+               </ul>-->
+            <h4>带路者（北京）网络科技有限公司</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带路者（北京）网络科技有限公司作为物资采购管理公司，是以建筑、建材、家居、家具等产品为主的供应链采购管理平台，为海外项目和海外其他业主以及委托方提供从咨询、议价、竞标、下订单、生产、提货、送货、报关、商检、结汇、安装、售后等一站式管家服务。其核心是保证供应商订单驱动、业务稳定性更强、利润更大化。促进从单一生产厂家升级为集群化平台作战，实现跨地区、跨平台作战，提升竞争力，降低风险，保障投资回报，产品更专业化，实现可持续良性发展。通过产品在平台供应链管理下去中间环节，形成有竞争力的价格体系，标准化的交付体系和科学的控制质量管理体系，保障了订单业务的稳定性及增长性。
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带路者网络承载3000个品牌、十八万个品类、几百万个SKU，包含：建筑主材类：建筑所需的钢材，玻璃门窗等各类主材；装饰装修类：装饰装修类的软装，饰品及空间美化等产品；绿色环保家居类：高端定制家具，床上用品，生活用品等；智能解决系统类：包括智能家居，网络，智能安防等；科技园林景观类：涵盖了园林绿化智能维护系统，创意景观等；机电设备类：主要有恒温恒湿智能解决系统，电梯、中央空调及各类电料等；工程机械类：从地勘开始到建筑封顶到装修装饰完成所需的各类设备市政施工类：道路施工，地下管网所需的各类材料等。
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带路者是”一带一路”沿线国家（海外项目）的房地产开发公司和海外工程施工总承包公司在中国境内的采购管理机构。为其提供管理工程物资材料的采购质量和进度等服务。
+        </div>
+    </div>
+        <!--关于我们 结束-->
+
+    <!--我们的服务 开始-->
+    <div class="our_services "  >
+        <div class="title" style="border-bottom: 0">
+            <p><span>Our services</span><span>我们的服务</span></p>
+        </div>
+        <div class="box w">
+            <ul>
+                <li>
+                    <img src="picture/about_me_server1.gif" alt="">
+                    <div>
+                        <i></i>
+                        <span class="span1">一站式交付</span>
+                        <span class="span2">ONE-STOP DELIVERY</span>
+                    </div>
+                    <p>从咨询、议价、竞标、下订单、生产、提货、送货、报关、商检、结汇、安装、售后等皆由平台一站完成，一站式管家服务。</p>
+                </li>
+                <li>
+                    <img src="picture/about_me_server2.gif" alt="">
+                    <div>
+                        <i></i>
+                        <span class="span1">供应商生产管理</span>
+                        <span class="span2">SUPPLIER PRODUCTION MANAGEMENT.</span>
+                    </div>
+                    <p>控制整个生产过程的管理，从原材料采购到加工生产，从生产质量到环保标准，一切标准化服务。</p>
+                </li>
+                <li>
+                    <img src="picture/about_me_server3.gif" alt="">
+                    <div>
+                        <i></i>
+                        <span class="span1">智能物流服务</span>
+                        <span class="span2">INTELLIGENT LOGISTICS SERVICE</span>
+                    </div>
+                    <p>标准化的出库、运输、仓储、入库、配送等，还具备专业性要求更高的采购、产品工程、质量控制等，个性化与集成化共存。</p>
+                </li>
+                <li>
+                    <img src="picture/about_me_server4.gif" alt="">
+                    <div>
+                        <i></i>
+                        <span class="span1">供应链金融服务</span>
+                        <span class="span2">SUPPLY CHAIN FINANCIAL SERVICES</span>
+                    </div>
+                    <p>围绕物流生态圈的三大用户（货主、物流企业、司机），横向物流商圈金融服务，纵向供应链、产业链金融服务。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--我们的服务 结束-->
+
+    <!--尾部-->
+    <div class="footer" id="footer"></div>
+    <script>
+        $("#footer").load("comment/footer.html");
+    </script>
+</div>
+<script>
+    //视频-->
+    var player1=document.getElementById("player1");
+    var videoBtn=document.getElementById("videoBtn");
+    var video = document.getElementById("video1");
+    var video1Box = document.getElementById("video1Box");
+    var mLoad2 = document.getElementById("mLoad2");
+    var mask = document.getElementById("mask");
+    var video1BoxMask = document.getElementById("video1BoxMask");
+    video.onmouseover=function () {
+        video1Box.style.display = 'block';
+        video.onclick=function(){
+            if(player1.paused){
+                player1.play();
+            }else{
+                player1.pause();
+            }
+        }
+        video1BoxMask.onclick=function(){
+            if(player1.paused){
+                player1.play();
+            }else{
+                player1.pause();
+            }
+        }
+    };
+    video.onmouseout=function () {
+        video1Box.style.display = 'none';
+    };
+    //点击播放按钮切换按钮图标
+    var flag = false;
+    videoBtn.onclick=function(){
+        if(flag)
+        {
+            document.getElementById("videoImg").src = "images/about_me/zt.png";
+            mLoad2.style.display = 'none';
+            flag=false;
+        }else {
+            document.getElementById("videoImg").src = "images/about_me/bf.png";
+            flag=true;
+        }
+
+    };
+    player1.onwaiting=function () {
+        mLoad2.style.display = 'block';
+        mask.style.display = 'block';
+
+    };
+    player1.onplaying =function () {
+        mLoad2.style.display = 'none';
+        mask.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>带路者官网</title>
+    <link rel="shortcut icon" href="images/common/myicon.ico">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?92fc21c0a5191a4a136b9b2240614e0c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+    <div class="top_header">
+        <div class="w">
+            <div class="left">
+                <p>您好，欢迎来到，带路者！</p>
+            </div>
+            <div class="right">
+                <div>
+                    <p><i></i><span>010-63838998</span></p>
+                    <p><i  class="email"></i><span>sw@Silkwalks.com</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--nav开始-->
+    <div class="nav">
+        <div class="header w clearfix">
+            <div class="top_left">
+                <h1><img src="images/common/header_logo.png"/></h1>
+            </div>
+            <div class="nav_all">
+                <div class="nav_l">
+                    <ul>
+                        <li class="current1">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li><a href="about_me.html">关于我们</a>
+                            <!--<div class="nav_box">
+                                <ul>
+                                    <li class="curr"><a href="join-condition.html">加盟条件</a></li>
+                                    <li><a href="partners.html">加盟申请</a></li>
+                                    <li><a href="join-log%20in.html">代理商登录</a></li>
+                                </ul>
+                            </div>-->
+                        </li>
+                        <li><a href="news.html">新闻动态</a></li>
+                        <li><a href="culture.html">企业文化</a></li>
+                        <li><a href="partners.php">合作伙伴</a></li>
+                        <li><a href="server_platform.html">服务平台</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <!--<div class="nav_r">
+                    <ul>
+                        <li>
+                            <a href="sign-in.html"><input class="zhuce" type="button" value="注册" /></a>
+                        </li>
+                        <li>
+                            <a href="log-in.html"><input class="denglu" type="button" value="登录" /></a>
+                        </li>
+                        <li>
+                            <p><images ecms="images/user_icon.png" />用户中心</p>
+                        </li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <!--nav结束-->
+    <script>
+        $(document).ready(function(){
+            $('.nav_l li a').each(function(){
+                if($($(this))[0].href==String(window.location)){
+                    $('.nav_l li').removeClass("current1");
+                    $(this).parent('li').addClass('current1');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>

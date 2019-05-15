@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>带路者官网</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+        <div class="top_header">
+            <div class="w">
+                <div class="left">
+                    <p>您好，欢迎来到，带路者！</p>
+                </div>
+                <div class="right">
+                    <div>
+                        <p><i></i><span>010-63838998</span></p>
+                        <p><i  class="email"></i><span>sw@Silkwalks.com</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--nav开始-->
+        <div class="nav">
+            <div class="w clearfix">
+                <div class="top_left">
+                    <h1><img src="images/common/header_logo.png"/></h1>
+                </div>
+                <div class="nav_all">
+                    <div class="nav_l">
+                        <ul>
+                            <li>
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li><a href="about_me.html">关于我们</a>
+                                <!--<div class="nav_box">
+                                    <ul>
+                                        <li class="curr"><a href="join-condition.html">加盟条件</a></li>
+                                        <li><a href="partners.html">加盟申请</a></li>
+                                        <li><a href="join-log%20in.html">代理商登录</a></li>
+                                    </ul>
+                                </div>-->
+                            </li>
+                            <li class="current1"><a href="news.html">新闻动态</a></li>
+                            <li><a href="culture.html">企业文化</a></li>
+                            <li><a href="partners.php">合作伙伴</a></li>
+                            <li><a href="server_platform.html">服务平台</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <!--<div class="nav_r">
+                        <ul>
+                            <li>
+                                <a href="sign-in.html"><input class="zhuce" type="button" value="注册" /></a>
+                            </li>
+                            <li>
+                                <a href="log-in.html"><input class="denglu" type="button" value="登录" /></a>
+                            </li>
+                            <li>
+                                <p><images ecms="images/user_icon.png" />用户中心</p>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!--nav结束-->
+
+
+        <div class="w article" >
+            <ul class="article_nav">
+                <li><a href="index.html">首页</a>&nbsp;>&nbsp;</li>
+                <li><a href="news.html">新闻中心</a>&nbsp;>&nbsp;</li>
+                <li id="stitle"></li>
+            </ul>
+            <div class="content">
+                <div id="journalism"></div>
+            </div>
+        </div>
+
+        <!--尾部-->
+        <div class="footer" id="footer"></div>
+        <script>
+            $("#footer").load("comment/footer.html");
+        </script>
+    </div>
+    <script>
+        $(function(){
+            //获取url中的参数
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg); //匹配目标参数
+                if (r != null) return unescape(r[2]); return null; //返回参数值
+            }
+            //接收URL中的参数booksId
+            var id = getUrlParam('newsId');
+            console.log('id:'+id);
+            $.ajax({
+                type:'get',
+                url:'data/data.json',
+                dataType:'json',
+                success:function(data,status){
+                    $.each(data.news, function(i,n) {
+                        //根据id获取详情数据
+                        if(id == n.id){
+                            var str = '<h4>'+n['desc']+'</h4>'+
+                                      '<p class="top"><span>'+n['date']+'</span> &nbsp; &nbsp;来源：<span>'+n['source']+'</span> &nbsp; &nbsp;作者:<span>'+n['author']+'</span></p>'+
+                                      '<div class="text">'+n['text']+'</div>'+
+                                      '<p >编辑 &nbsp; &nbsp;<span>'+n['editor']+'</span></p>'
+                            var stit='<a href="javascript:;">'+n['desc']+'</a>'
+                        }
+                        $('#journalism').append(str);
+                        $('#stitle').append(stit);
+                    });
+                }
+            })
+        })
+    </script>
+</body>
+</html>
