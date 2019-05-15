@@ -339,14 +339,17 @@ h1,h2,h3,h4,h5,p,ul,li,div,span,dl,dd,dt,img,button,input,strong,tr,td,table,tbo
    .about_me .box p{font-size: 14px}
    .news .box .bottom .right ul li span{margin-left: 8px}
    .article{padding: 0}
+   .news .box .top img{display: none}
 
   }
 
    @media screen and (min-width:480px){
     .w{width: 950px;margin: 0 auto }
-    .news .box .top div{    width: 525px;}
-    .news .box .bottom .right{width: 604px}
-    .news .box .bottom .right ul li p{    width: 385px;overflow: hidden; float: left;}
+    .news .box .top img{display: none}
+    .news .box .top div{    width: 92%;height: inherit}
+    .news .box .bottom .left{display: none}
+    .news .box .bottom .right{width: 100%}
+    .news .box .bottom .right ul li p{    width: 70%;overflow: hidden; float: left;}
     .culture .box div img{width: 400px}
     .culture .box .list1 img{width: 440px}
     .culture .box div div{width: 400px}
@@ -361,4 +364,5 @@ h1,h2,h3,h4,h5,p,ul,li,div,span,dl,dd,dt,img,button,input,strong,tr,td,table,tbo
     .about_me .box p{font-size: 14px}
     .news .box .bottom .right ul li span{margin-left: 8px}
     .article{padding: 0}
+
    }
